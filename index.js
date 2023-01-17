@@ -1,14 +1,3 @@
-// var http = require("http");
-
-// http
-//   .createServer(function (req, res) {
-//     res.writeHead(200, { "Content-Type": "text/plain" });
-//     res.end("Hola, mundo");
-//   })
-//   .listen(3000);
-
-// console.log("Server escuchando en localhost:3000");
-
 const express = require("express");
 const logger = require("morgan");
 
@@ -26,6 +15,6 @@ app.use("/pacientes", pacientesRouter);
 app.use("/medicos", medicosRouter);
 app.use("/tratamientos", tratamientosRouter);
 
-app.listen(3000, function () {
+app.listen(process.env.APP_PORT, function () {
   console.log("Servidor escuchando en localhost:3000");
 });

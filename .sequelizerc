@@ -1,0 +1,12 @@
+const path = require("path");
+
+module.exports = {
+  // ? ruta del archivo de configuracion de la bbdd
+  config: path.resolve("./src/database/config", "config.js"),
+  // ? ruta de los modelos
+  "models-path": path.resolve("./src/database/models"),
+  // ? ruta de los seeders
+  "seeders-path": path.resolve("./src/database/seeders"),
+  // ? ruta de las migraciones
+  "migrations-path": path.resolve("./src/database/migrations"),
+};
